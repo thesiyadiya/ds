@@ -18,8 +18,6 @@ void main()
 	reverselist();
 	printf("\n Data in the list \n");
 	displaylist();
-	printf("\n Data in the list \n");
-	displaylist();
 }
 void createlist()
 {
@@ -52,7 +50,7 @@ void reverselist()
 		curnode=head->next;
 		head=head->next;
 		prevnode->next=NULL;
-		while(head!=NULL);
+		while(head!=NULL)
 		{
 			head=head->next;
 			curnode->next=prevnode;
@@ -79,4 +77,5 @@ void displaylist()
 			temp=temp->next;
 		}
 	}
+	getch();
 }
