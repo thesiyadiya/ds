@@ -1,18 +1,18 @@
-#include<stdio.h>
 #include<conio.h>
+#include<stdio.h>
 int queue[10];
-int front=-1,rear= -1;
+int front=-1,rear=-1;
 void enq(int);
 void dq();
 void disp();
 void main()
 {
 	clrscr();
-	enq(50);
-	enq(99);
-	enq(1);
+	enq(100);
+	enq(20);
+	enq(600);
 	disp();
-	printf("\n ---------------------\n");
+	printf("\n--------\n");
 	dq();
 	disp();
 	getch();
@@ -21,11 +21,11 @@ void enq(int a)
 {
 	if(rear>=9)
 	{
-		printf("\n Queue is full");
+		printf("\n queue is full");
 	}
 	else
 	{
-		if(front==-1 &&  rear==-1)
+		if(front==-1 && rear==-1)
 		{
 			front=0;
 			rear++;
@@ -45,19 +45,19 @@ void disp()
 	{
 		for(i=front;i<=rear;i++)
 		{
-			printf("\n %d=> %d",queue[i],i);
+			printf("\n%d",queue[i]);
 		}
 	}
 	else
 	{
-		printf("\n Queue is Empty");
+		printf("\n queue is empty");
 	}
 }
 void dq()
 {
 	if(rear<0)
 	{
-		printf("\n Queue is Empty");
+		printf("\n queue is empty");
 	}
 	else
 	{
@@ -68,7 +68,7 @@ void dq()
 		}
 		else
 		{
-			front ++;
+			front++;
 		}
 	}
 }
